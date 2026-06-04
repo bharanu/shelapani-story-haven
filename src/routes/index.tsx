@@ -51,24 +51,6 @@ function Index() {
     "https://www.google.com/maps/place/Shelapani+Homes/@31.1049633,77.1614113,17z/data=!4m24!1m12!3m11!1s0x390578eeede0f663:0xaf8be67977a147f1!2sShelapani+Homes!5m3!1s2026-06-18!4m1!1i2!8m2!3d31.1049633!4d77.1639862!16s%2Fg%2F11yrhz8z91!17BQ0FF!3m10!1s0x390578eeede0f663:0xaf8be67977a147f1!5m3!1s2026-06-18!4m1!1i2!8m2!3d31.1049633!4d77.1639862!16s%2Fg%2F11yrhz8z91!17BQ0FF?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D";
   const youtubeEmbed = "https://www.youtube.com/embed/WJRbGW8MY-8?si=FQZom_quMUvZe1vf";
 
-  const journeyMoments = [
-    {
-      title: "An artist's eye",
-      copy:
-        "Sudhir Khimta's early years moved between cricket fields, art classrooms, and the rhythm of mountain life—teaching him to see discipline and beauty at once.",
-    },
-    {
-      title: "Back to the orchard",
-      copy:
-        "When family and village called him home, he returned to manage the ancestral apple orchards, carrying with him a creative instinct that would later define Shelapani Homes.",
-    },
-    {
-      title: "A bold mountain dream",
-      copy:
-        "In 2000, Sudhir and Manju Khimta built what locals once doubted possible: Shimla's first luxury pool villa, imagined with conviction before tourism had truly arrived.",
-    },
-  ];
-
   const experienceNotes = [
     {
       icon: Mountain,
