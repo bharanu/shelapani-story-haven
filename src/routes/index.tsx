@@ -19,6 +19,8 @@ import signAsset from "@/assets/shelapani-sign.png.asset.json";
 import loungeAsset from "@/assets/shelapani-lounge.png.asset.json";
 import suiteWindowAsset from "@/assets/shelapani-window-suite.png.asset.json";
 import bedroomAsset from "@/assets/shelapani-bedroom.png.asset.json";
+import jamAsset from "@/assets/shelapani-jam.png.asset.json";
+import strawberriesAsset from "@/assets/shelapani-strawberries.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -48,24 +50,6 @@ function Index() {
   const mapLink =
     "https://www.google.com/maps/place/Shelapani+Homes/@31.1049633,77.1614113,17z/data=!4m24!1m12!3m11!1s0x390578eeede0f663:0xaf8be67977a147f1!2sShelapani+Homes!5m3!1s2026-06-18!4m1!1i2!8m2!3d31.1049633!4d77.1639862!16s%2Fg%2F11yrhz8z91!17BQ0FF!3m10!1s0x390578eeede0f663:0xaf8be67977a147f1!5m3!1s2026-06-18!4m1!1i2!8m2!3d31.1049633!4d77.1639862!16s%2Fg%2F11yrhz8z91!17BQ0FF?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D";
   const youtubeEmbed = "https://www.youtube.com/embed/WJRbGW8MY-8?si=FQZom_quMUvZe1vf";
-
-  const journeyMoments = [
-    {
-      title: "An artist's eye",
-      copy:
-        "Sudhir Khimta's early years moved between cricket fields, art classrooms, and the rhythm of mountain life—teaching him to see discipline and beauty at once.",
-    },
-    {
-      title: "Back to the orchard",
-      copy:
-        "When family and village called him home, he returned to manage the ancestral apple orchards, carrying with him a creative instinct that would later define Shelapani Homes.",
-    },
-    {
-      title: "A bold mountain dream",
-      copy:
-        "In 2000, Sudhir and Manju Khimta built what locals once doubted possible: Shimla's first luxury pool villa, imagined with conviction before tourism had truly arrived.",
-    },
-  ];
 
   const experienceNotes = [
     {
@@ -116,7 +100,7 @@ function Index() {
           </header>
 
           <div className="grid items-end gap-10 py-16 lg:grid-cols-[minmax(0,1fr)_22rem] lg:py-24">
-            <div className="animate-drift-up max-w-3xl space-y-6" style={{ animationDelay: "120ms" }}>
+            <div className="animate-drift-up max-w-3xl space-y-6 lg:col-span-2" style={{ animationDelay: "120ms" }}>
               <span className="eyebrow text-hero-foreground/86 before:bg-hero-foreground/45">
                 Built in 2000 by Sudhir Khimta &amp; Manju Khimta
               </span>
@@ -142,72 +126,51 @@ function Index() {
                 </Button>
               </div>
             </div>
-
-            <aside
-              className="animate-drift-up surface-panel rounded-lg border border-white/10 p-5 sm:p-6"
-              style={{ animationDelay: "240ms" }}
-            >
-              <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">The experience</p>
-              <div className="mt-5 space-y-4">
-                <div className="border-b border-border/70 pb-4">
-                  <p className="text-sm text-muted-foreground">Stay mood</p>
-                  <p className="mt-1 text-lg font-semibold text-foreground">Private, scenic, deeply personal</p>
-                </div>
-                <div className="border-b border-border/70 pb-4">
-                  <p className="text-sm text-muted-foreground">Signature legacy</p>
-                  <p className="mt-1 text-lg font-semibold text-foreground">
-                    Shimla's first luxury pool villa
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Direct access</p>
-                  <div className="mt-3 flex flex-col gap-3">
-                    <a href={mapLink} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition hover:text-primary">
-                      <MapPinned className="size-4" />
-                      View location
-                    </a>
-                    <a href={emailLink} className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition hover:text-primary">
-                      <Mail className="size-4" />
-                      suderkhimta@gmail.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </aside>
           </div>
         </div>
       </section>
 
       <section id="story" className="bg-story-glow py-20 sm:py-28">
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+        <div className="section-shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="space-y-6">
             <span className="eyebrow">Founders' story</span>
-            <h2 className="text-balance text-4xl font-semibold leading-tight sm:text-5xl">
-              Before Shelapani became a destination, it was a personal act of faith.
-            </h2>
-            <p className="max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
-              Sudhir's journey began in motion—sports, art, competition, and the emotional ups and downs he
-              compares to life's uneven path. That layered experience returned with him to the village, where the
-              ancestral orchards and a dream of home slowly became something unforgettable.
-            </p>
             <img
               src={ownerAsset.url}
               alt="Sudhir and Manju Khimta sharing a quiet moment at Shelapani Homes"
-              className="shadow-luxury aspect-[4/5] w-full rounded-lg object-cover"
+              className="shadow-luxury mx-auto aspect-[4/5] w-full max-w-sm rounded-lg object-cover"
               loading="lazy"
             />
+            <p className="text-center text-sm uppercase tracking-[0.22em] text-muted-foreground">
+              Sudhir &amp; Manju Khimta
+            </p>
           </div>
 
-          <div className="grid gap-4 sm:gap-5">
-            {journeyMoments.map((item, index) => (
-              <article key={item.title} className="rounded-lg border border-border bg-card p-6 shadow-soft sm:p-8">
-                <div className="flex items-baseline justify-between gap-4">
-                  <h3 className="text-2xl font-semibold">{item.title}</h3>
-                  <span className="text-sm font-semibold text-highlight">0{index + 1}</span>
-                </div>
-                <p className="mt-4 text-base leading-7 text-muted-foreground">{item.copy}</p>
-              </article>
-            ))}
+          <div className="space-y-6">
+            <h2 className="text-balance text-4xl font-semibold leading-tight sm:text-5xl">
+              Before Shelapani became a destination, it was a personal act of faith.
+            </h2>
+            <div className="space-y-5 font-display text-lg leading-[1.85] text-foreground/85 sm:text-xl">
+              <p>
+                Sudhir Khimta's earliest years moved to the rhythm of the mountains—cricket fields where he
+                represented Himachal in the junior ranks, art classrooms where he chose fine arts over a
+                conventional path, and a childhood he still describes through a quiet metaphor about life's
+                inevitable ups and downs. Discipline from sport, sensitivity from art, and the steady pulse of
+                Shimla shaped a young man with an unusually layered way of seeing the world.
+              </p>
+              <p>
+                When family and village called, he returned home to tend the ancestral apple orchards, trading
+                studio walls for open skies. Years later, with Manju Khimta beside him as both partner and
+                co-dreamer, that creative instinct found its truest expression: in the year 2000, long before
+                luxury tourism arrived in the hills, they built what locals had quietly doubted was possible—
+                <span className="font-semibold text-foreground">Shimla's first luxury pool villa</span>,
+                promoted in the early days through nothing more than newspaper ads and conviction.
+              </p>
+              <p>
+                Shelapani Homes is the quiet sum of all of it—an artist's eye, a sportsman's discipline, an
+                orchardist's patience, and a family's unwavering faith in a vision that has aged into a
+                legacy. To stay here is to step inside that story.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -218,13 +181,13 @@ function Index() {
             <img
               src={orchardAsset.url}
               alt="Organic garden sign among apple trees at Shelapani Homes"
-              className="aspect-[4/5] w-full rounded-lg object-cover shadow-soft"
+              className="aspect-[4/5] w-full max-w-xs rounded-lg object-cover shadow-soft"
               loading="lazy"
             />
             <img
               src={signAsset.url}
               alt="Shelapani Homes wooden sign surrounded by greenery"
-              className="aspect-[4/5] w-full rounded-lg object-cover shadow-soft sm:translate-y-10"
+              className="aspect-[4/5] w-full max-w-xs rounded-lg object-cover shadow-soft sm:translate-y-10"
               loading="lazy"
             />
           </div>
@@ -254,6 +217,46 @@ function Index() {
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-story-glow py-20 sm:py-28">
+        <div className="section-shell grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div className="order-2 grid grid-cols-2 gap-4 lg:order-1">
+            <img
+              src={strawberriesAsset.url}
+              alt="Freshly harvested organic strawberries from the Shelapani garden"
+              className="aspect-square w-full rounded-lg object-cover shadow-soft"
+              loading="lazy"
+            />
+            <img
+              src={jamAsset.url}
+              alt="Shelapani Organic homemade apricot jam"
+              className="aspect-square w-full translate-y-6 rounded-lg object-cover shadow-soft"
+              loading="lazy"
+            />
+          </div>
+          <div className="order-1 space-y-6 lg:order-2">
+            <span className="eyebrow">From our garden to your table</span>
+            <h2 className="text-balance text-4xl font-semibold leading-tight sm:text-5xl">
+              An organic garden quietly tended for every guest who stays.
+            </h2>
+            <div className="space-y-5 font-display text-lg leading-[1.85] text-foreground/85 sm:text-xl">
+              <p>
+                Wrapped around the villa is a living, breathing organic garden—rows of strawberries warming in
+                the mountain sun, apricot and apple trees heavy with seasonal fruit, and gentle beds of
+                vegetables and herbs that the family has tended for years without a trace of chemicals. Nothing
+                here is grown for show; it is grown to be picked, cooked, and shared.
+              </p>
+              <p>
+                Guests wake up to fruit that was on the branch the evening before, vegetables pulled from the
+                soil that morning, and small jars of <span className="font-semibold text-foreground">Shelapani
+                Organic</span> homemade jams—apricot, strawberry, and whatever the season offers—made in
+                Manju's kitchen from the garden's own harvest. Staying at Shelapani Homes is staying close to
+                the land, and tasting exactly what that closeness means.
+              </p>
             </div>
           </div>
         </div>
