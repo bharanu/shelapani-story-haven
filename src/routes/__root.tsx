@@ -85,6 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Shelapani Homes" },
+      { name: "twitter:description", content: "Premium experience-led villa stay website for Shelapani Homes in Shimla." },
     ],
     links: [
       {
