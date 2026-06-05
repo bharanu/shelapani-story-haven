@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { assetUrl } from "@/lib/asset-url";
 import heroAsset from "@/assets/shelapani-hero.png.asset.json";
 import ownerAsset from "@/assets/shelapani-owners.png.asset.json";
 import orchardAsset from "@/assets/shelapani-orchard.png.asset.json";
@@ -39,8 +40,8 @@ export const Route = createFileRoute("/")({
         content:
           "A cinematic luxury stay in Shimla with founder story, mountain views, elegant rooms, poolside calm, and direct WhatsApp booking.",
       },
-      { property: "og:image", content: heroAsset.url },
-      { name: "twitter:image", content: heroAsset.url },
+      { property: "og:image", content: assetUrl(heroAsset) },
+      { name: "twitter:image", content: assetUrl(heroAsset) },
     ],
   }),
   component: Index,
@@ -75,7 +76,7 @@ function Index() {
     <main className="bg-background text-foreground">
       <section className="relative min-h-screen overflow-hidden bg-hero text-hero-foreground">
         <img
-          src={heroAsset.url}
+          src={assetUrl(heroAsset)}
           alt="Shelapani Homes exterior at sunset in Shimla"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -137,7 +138,7 @@ function Index() {
           <div className="space-y-6">
             <span className="eyebrow">Founders' story</span>
             <img
-              src={ownerAsset.url}
+              src={assetUrl(ownerAsset)}
               alt="Sudhir and Manju Khimta sharing a quiet moment at Shelapani Homes"
               className="shadow-luxury mx-auto aspect-[4/5] w-full max-w-sm rounded-lg object-cover"
               loading="lazy"
@@ -181,13 +182,13 @@ function Index() {
         <div className="section-shell grid gap-12 lg:grid-cols-[1.04fr_0.96fr] lg:items-center">
           <div className="grid gap-4 sm:grid-cols-2">
             <img
-              src={orchardAsset.url}
+              src={assetUrl(orchardAsset)}
               alt="Organic garden sign among apple trees at Shelapani Homes"
               className="aspect-[4/5] w-full max-w-xs rounded-lg object-cover shadow-soft"
               loading="lazy"
             />
             <img
-              src={signAsset.url}
+              src={assetUrl(signAsset)}
               alt="Shelapani Homes wooden sign surrounded by greenery"
               className="aspect-[4/5] w-full max-w-xs rounded-lg object-cover shadow-soft sm:translate-y-10"
               loading="lazy"
@@ -228,13 +229,13 @@ function Index() {
         <div className="section-shell grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div className="order-2 grid grid-cols-2 gap-4 lg:order-1">
             <img
-              src={strawberriesAsset.url}
+              src={assetUrl(strawberriesAsset)}
               alt="Freshly harvested organic strawberries from the Shelapani garden"
               className="aspect-square w-full rounded-lg object-cover shadow-soft"
               loading="lazy"
             />
             <img
-              src={jamAsset.url}
+              src={assetUrl(jamAsset)}
               alt="Shelapani Organic homemade apricot jam"
               className="aspect-square w-full translate-y-6 rounded-lg object-cover shadow-soft"
               loading="lazy"
@@ -288,13 +289,13 @@ function Index() {
 
           <div className="grid gap-5 sm:grid-cols-2">
             <img
-              src={petsAsset.url}
+              src={assetUrl(petsAsset)}
               alt="Hosts with beloved dogs on the Shelapani Homes lawn"
               className="aspect-[4/5] w-full rounded-lg object-cover shadow-luxury"
               loading="lazy"
             />
             <img
-              src={guestsAsset.url}
+              src={assetUrl(guestsAsset)}
               alt="Happy guests celebrating outside the red-roofed Shelapani Homes villa"
               className="aspect-[4/5] w-full rounded-lg object-cover shadow-soft sm:translate-y-8"
               loading="lazy"
@@ -318,13 +319,13 @@ function Index() {
 
           <div className="grid gap-5 lg:grid-cols-[1.35fr_1fr_1fr]">
             <img
-              src={loungeAsset.url}
+              src={assetUrl(loungeAsset)}
               alt="Grand lounge with warm lighting inside Shelapani Homes"
               className="aspect-[5/4] h-full w-full rounded-lg object-cover shadow-luxury lg:row-span-2"
               loading="lazy"
             />
             <img
-              src={suiteWindowAsset.url}
+              src={assetUrl(suiteWindowAsset)}
               alt="Window-side seating with mountain light in a Shelapani Homes suite"
               className="aspect-[4/3] w-full rounded-lg object-cover shadow-soft"
               loading="lazy"
@@ -346,7 +347,7 @@ function Index() {
               </p>
             </div>
             <img
-              src={bedroomAsset.url}
+              src={assetUrl(bedroomAsset)}
               alt="Premium bedroom interior at Shelapani Homes"
               className="aspect-[4/3] w-full rounded-lg object-cover shadow-soft"
               loading="lazy"
