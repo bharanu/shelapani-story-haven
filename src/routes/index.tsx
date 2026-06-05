@@ -268,6 +268,44 @@ function Index() {
             </div>
           </div>
         </div>
+
+        <div className="section-shell mt-20 sm:mt-28">
+          <div className="mx-auto max-w-3xl text-center space-y-4">
+            <span className="eyebrow justify-center">The Shelapani Organic label</span>
+            <h3 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl">
+              Slow-crafted preserves, pickles, and cider vinegar—made in the hills, bottled with care.
+            </h3>
+            <p className="text-base leading-7 text-muted-foreground sm:text-lg">
+              What began as a way to honour every harvest has quietly become a small artisan label. Each jar of
+              Apple Jam, Green Apple Pickle, and Apple Cider Vinegar is made in limited batches from the
+              family's own orchard—no preservatives, no shortcuts, just fruit, time, and Manju's recipes.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+            {[
+              { src: appleJamAsset, alt: "Shelapani Organic Apple Jam with cinnamon", name: "Apple Jam", note: "With a whisper of cinnamon. Spooned warm from Manju's kitchen." },
+              { src: pickleAsset, alt: "Shelapani Organic Green Apple Pickle", name: "Green Apple Pickle", note: "Tart, slow-spiced, and pressed from the orchard's own green apples." },
+              { src: vinegarAsset, alt: "Shelapani Organic Apple Cider Vinegar with the mother", name: "Apple Cider Vinegar", note: "Raw, unfiltered, and aged the old way—with the mother intact." },
+            ].map((p) => (
+              <article key={p.name} className="group rounded-lg border border-border bg-card overflow-hidden shadow-soft transition hover:shadow-luxury">
+                <div className="overflow-hidden bg-secondary/40">
+                  <img
+                    src={assetUrl(p.src)}
+                    alt={p.alt}
+                    className="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-6 space-y-2">
+                  <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Shelapani Organic</p>
+                  <h4 className="font-display text-2xl font-semibold">{p.name}</h4>
+                  <p className="text-sm leading-6 text-muted-foreground">{p.note}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="py-20 sm:py-28">
