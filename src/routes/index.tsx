@@ -24,6 +24,11 @@ import jamAsset from "@/assets/shelapani-jam.png.asset.json";
 import strawberriesAsset from "@/assets/shelapani-strawberries.png.asset.json";
 import petsAsset from "@/assets/shelapani-pets.png.asset.json";
 import guestsAsset from "@/assets/shelapani-guests.png.asset.json";
+import shopAsset from "@/assets/shelapani-shop.png.asset.json";
+import poolAsset from "@/assets/shelapani-pool.jpeg.asset.json";
+import pickleAsset from "@/assets/shelapani-pickle.png.asset.json";
+import vinegarAsset from "@/assets/shelapani-vinegar.png.asset.json";
+import appleJamAsset from "@/assets/shelapani-applejam.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -263,6 +268,44 @@ function Index() {
             </div>
           </div>
         </div>
+
+        <div className="section-shell mt-20 sm:mt-28">
+          <div className="mx-auto max-w-3xl text-center space-y-4">
+            <span className="eyebrow justify-center">The Shelapani Organic label</span>
+            <h3 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl">
+              Slow-crafted preserves, pickles, and cider vinegar—made in the hills, bottled with care.
+            </h3>
+            <p className="text-base leading-7 text-muted-foreground sm:text-lg">
+              What began as a way to honour every harvest has quietly become a small artisan label. Each jar of
+              Apple Jam, Green Apple Pickle, and Apple Cider Vinegar is made in limited batches from the
+              family's own orchard—no preservatives, no shortcuts, just fruit, time, and Manju's recipes.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+            {[
+              { src: appleJamAsset, alt: "Shelapani Organic Apple Jam with cinnamon", name: "Apple Jam", note: "With a whisper of cinnamon. Spooned warm from Manju's kitchen." },
+              { src: pickleAsset, alt: "Shelapani Organic Green Apple Pickle", name: "Green Apple Pickle", note: "Tart, slow-spiced, and pressed from the orchard's own green apples." },
+              { src: vinegarAsset, alt: "Shelapani Organic Apple Cider Vinegar with the mother", name: "Apple Cider Vinegar", note: "Raw, unfiltered, and aged the old way—with the mother intact." },
+            ].map((p) => (
+              <article key={p.name} className="group rounded-lg border border-border bg-card overflow-hidden shadow-soft transition hover:shadow-luxury">
+                <div className="overflow-hidden bg-secondary/40">
+                  <img
+                    src={assetUrl(p.src)}
+                    alt={p.alt}
+                    className="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-6 space-y-2">
+                  <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Shelapani Organic</p>
+                  <h4 className="font-display text-2xl font-semibold">{p.name}</h4>
+                  <p className="text-sm leading-6 text-muted-foreground">{p.note}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="py-20 sm:py-28">
@@ -330,22 +373,18 @@ function Index() {
               className="aspect-[4/3] w-full rounded-lg object-cover shadow-soft"
               loading="lazy"
             />
-            <div className="rounded-lg bg-card p-6 shadow-soft sm:p-8">
-              <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">A home that hosts</p>
-              <p className="mt-4 text-3xl font-semibold text-foreground">Elegant rooms, mountain-facing calm, and spaces made to gather.</p>
-              <p className="mt-4 text-base leading-7 text-muted-foreground">
-                Spacious interiors and premium detailing bring comfort to every part of the stay—from quiet mornings
-                by the window to memorable evenings with family and friends.
-              </p>
-            </div>
-            <div className="rounded-lg bg-primary p-6 text-primary-foreground shadow-soft sm:p-8">
-              <p className="text-xs uppercase tracking-[0.22em] text-primary-foreground/70">Built for a new era</p>
-              <p className="mt-4 text-3xl font-semibold">An ambitious villa created before luxury tourism felt certain.</p>
-              <p className="mt-4 text-base leading-7 text-primary-foreground/80">
-                Early promotion began with newspaper ads and belief—proof that the Shelapani story has always been
-                about vision first, validation later.
-              </p>
-            </div>
+            <img
+              src={assetUrl(shopAsset)}
+              alt="Shelapani Organic farm-to-table products on display"
+              className="aspect-[4/3] w-full rounded-lg object-cover shadow-soft"
+              loading="lazy"
+            />
+            <img
+              src={assetUrl(poolAsset)}
+              alt="Infinity pool at Shelapani Homes overlooking the Himalayan sunset"
+              className="aspect-[4/3] w-full rounded-lg object-cover shadow-luxury"
+              loading="lazy"
+            />
             <img
               src={assetUrl(bedroomAsset)}
               alt="Premium bedroom interior at Shelapani Homes"
