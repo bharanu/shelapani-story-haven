@@ -21,6 +21,8 @@ import suiteWindowAsset from "@/assets/shelapani-window-suite.png.asset.json";
 import bedroomAsset from "@/assets/shelapani-bedroom.png.asset.json";
 import jamAsset from "@/assets/shelapani-jam.png.asset.json";
 import strawberriesAsset from "@/assets/shelapani-strawberries.png.asset.json";
+import petsAsset from "@/assets/shelapani-pets.png.asset.json";
+import guestsAsset from "@/assets/shelapani-guests.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -258,6 +260,45 @@ function Index() {
                 the land, and tasting exactly what that closeness means.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-28">
+        <div className="section-shell grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="space-y-6">
+            <span className="eyebrow">The warmth of a lived-in home</span>
+            <h2 className="text-balance text-4xl font-semibold leading-tight sm:text-5xl">
+              Where guests arrive for the view and remember the feeling.
+            </h2>
+            <div className="space-y-5 font-display text-lg leading-[1.85] text-foreground/85 sm:text-xl">
+              <p>
+                Shelapani Homes carries the easy generosity of a family house: sun on the lawn, laughter in front of
+                the red-roofed villa, and the gentle company of beloved dogs who make the garden feel alive. It is
+                polished and premium, yet never distant—the kind of place where photographs become warmer because the
+                people in them feel completely at ease.
+              </p>
+              <p>
+                For families, friends, creative crews, and travellers looking for something more intimate than a hotel,
+                the villa offers space to gather beautifully. Every celebration feels framed by mountain air, orchard
+                calm, and the unmistakable charm of a home that has been hosting with heart for years.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            <img
+              src={petsAsset.url}
+              alt="Hosts with beloved dogs on the Shelapani Homes lawn"
+              className="aspect-[4/5] w-full rounded-lg object-cover shadow-luxury"
+              loading="lazy"
+            />
+            <img
+              src={guestsAsset.url}
+              alt="Happy guests celebrating outside the red-roofed Shelapani Homes villa"
+              className="aspect-[4/5] w-full rounded-lg object-cover shadow-soft sm:translate-y-8"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
