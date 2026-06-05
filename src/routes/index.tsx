@@ -24,6 +24,11 @@ import jamAsset from "@/assets/shelapani-jam.png.asset.json";
 import strawberriesAsset from "@/assets/shelapani-strawberries.png.asset.json";
 import petsAsset from "@/assets/shelapani-pets.png.asset.json";
 import guestsAsset from "@/assets/shelapani-guests.png.asset.json";
+import shopAsset from "@/assets/shelapani-shop.png.asset.json";
+import poolAsset from "@/assets/shelapani-pool.jpeg.asset.json";
+import pickleAsset from "@/assets/shelapani-pickle.png.asset.json";
+import vinegarAsset from "@/assets/shelapani-vinegar.png.asset.json";
+import appleJamAsset from "@/assets/shelapani-applejam.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
