@@ -373,22 +373,18 @@ function Index() {
               className="aspect-[4/3] w-full rounded-lg object-cover shadow-soft"
               loading="lazy"
             />
-            <div className="rounded-lg bg-card p-6 shadow-soft sm:p-8">
-              <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">A home that hosts</p>
-              <p className="mt-4 text-3xl font-semibold text-foreground">Elegant rooms, mountain-facing calm, and spaces made to gather.</p>
-              <p className="mt-4 text-base leading-7 text-muted-foreground">
-                Spacious interiors and premium detailing bring comfort to every part of the stay—from quiet mornings
-                by the window to memorable evenings with family and friends.
-              </p>
-            </div>
-            <div className="rounded-lg bg-primary p-6 text-primary-foreground shadow-soft sm:p-8">
-              <p className="text-xs uppercase tracking-[0.22em] text-primary-foreground/70">Built for a new era</p>
-              <p className="mt-4 text-3xl font-semibold">An ambitious villa created before luxury tourism felt certain.</p>
-              <p className="mt-4 text-base leading-7 text-primary-foreground/80">
-                Early promotion began with newspaper ads and belief—proof that the Shelapani story has always been
-                about vision first, validation later.
-              </p>
-            </div>
+            <img
+              src={assetUrl(shopAsset)}
+              alt="Shelapani Organic farm-to-table products on display"
+              className="aspect-[4/3] w-full rounded-lg object-cover shadow-soft"
+              loading="lazy"
+            />
+            <img
+              src={assetUrl(poolAsset)}
+              alt="Infinity pool at Shelapani Homes overlooking the Himalayan sunset"
+              className="aspect-[4/3] w-full rounded-lg object-cover shadow-luxury"
+              loading="lazy"
+            />
             <img
               src={assetUrl(bedroomAsset)}
               alt="Premium bedroom interior at Shelapani Homes"
