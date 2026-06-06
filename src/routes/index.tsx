@@ -19,7 +19,6 @@ import orchardAsset from "@/assets/shelapani-orchard.png.asset.json";
 import signAsset from "@/assets/shelapani-sign.png.asset.json";
 import loungeAsset from "@/assets/shelapani-lounge.png.asset.json";
 import suiteWindowAsset from "@/assets/shelapani-window-suite.png.asset.json";
-import bedroomAsset from "@/assets/shelapani-bedroom.png.asset.json";
 import jamAsset from "@/assets/shelapani-jam.png.asset.json";
 import strawberriesAsset from "@/assets/shelapani-strawberries.png.asset.json";
 import petsAsset from "@/assets/shelapani-pets.png.asset.json";
@@ -386,8 +385,8 @@ function Index() {
               loading="lazy"
             />
             <img
-              src={assetUrl(bedroomAsset)}
-              alt="Premium bedroom interior at Shelapani Homes"
+              src={assetUrl(suiteWindowAsset)}
+              alt="Premium suite interior at Shelapani Homes"
               className="aspect-[4/3] w-full rounded-lg object-cover shadow-soft"
               loading="lazy"
             />
