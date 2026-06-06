@@ -13,7 +13,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { assetUrl } from "@/lib/asset-url";
-import heroAsset from "@/assets/shelapani-hero.png.asset.json";
+import heroAsset from "@/assets/shelapani-collage.jpeg.asset.json";
 import ownerAsset from "@/assets/shelapani-owners.png.asset.json";
 import orchardAsset from "@/assets/shelapani-orchard.png.asset.json";
 import signAsset from "@/assets/shelapani-sign.png.asset.json";
