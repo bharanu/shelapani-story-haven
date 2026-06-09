@@ -83,8 +83,6 @@ function Index() {
           src={assetUrl(heroAsset)}
           alt="Shelapani Homes exterior at sunset in Shimla"
           className="absolute inset-0 h-full w-full object-cover"
-          fetchPriority="high"
-          decoding="async"
         />
         <div className="absolute inset-0 bg-overlay" />
 
