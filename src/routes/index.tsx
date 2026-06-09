@@ -384,12 +384,6 @@ function Index() {
               className="aspect-[4/3] w-full rounded-lg object-cover shadow-luxury"
               loading="lazy"
             />
-            <img
-              src={assetUrl(suiteWindowAsset)}
-              alt="Premium suite interior at Shelapani Homes"
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-soft"
-              loading="lazy"
-            />
           </div>
         </div>
       </section>
