@@ -11,6 +11,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import logoAsset from "../assets/shelapani-logo.png.asset.json";
+import { assetUrl } from "../lib/asset-url";
 
 function NotFoundComponent() {
   return (
@@ -91,6 +93,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "icon", type: "image/png", href: assetUrl(logoAsset) },
+      { rel: "apple-touch-icon", href: assetUrl(logoAsset) },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LodgingBusiness",
+          name: "Shelapani Homes",
+          description:
+            "Premium luxury pool villa stay in Shimla, Himachal Pradesh built by Sudhir and Manju Khimta.",
+          url: "https://shelapani-story-haven.lovable.app",
+          logo: assetUrl(logoAsset),
+          image: assetUrl(logoAsset),
+          telephone: "+91-9779932322",
+          email: "suderkhimta@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Shimla",
+            addressRegion: "Himachal Pradesh",
+            addressCountry: "IN",
+          },
+        }),
       },
     ],
   }),
